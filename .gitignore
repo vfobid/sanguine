@@ -1,0 +1,23 @@
+# Compiled output
+*.class
+*.jar
+/build/
+/out/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Local configuration
+config/

@@ -1,0 +1,23 @@
+The purpose of a user-player interface is to dictate and guide how a player will interact with the model.
+A user-player can choose what to do with their turn while the model enforces the rules (stating which moves are valid).
+
+In order to design the player interface here are some general methods we look to implement:
+- decideTurn: this chooses whether to place a card or to pass up the turn
+- selectCard: If it chooses to place a card, the bot must select which card from their hand to play
+- selectPosition: When placing the card, the both must select a place on the board to place their card.
+
+As for the different types of players in this interface, we have 2 options:
+1) A human player who reads input from the console/GUI and will be prompted to choose their move
+and depending on their move to select a card and position. If an input is invalid, the user will be prompted
+to re enter their choosing. For each player, the board is rendered such that from the player's view they are
+the "red" player, and the other player is the blue player, placing items using the opposite column indexing.
+2) An AI player who tries each card at each position on the board and places the first valid card in their hand. If there
+are no valid moves, it will pass its turn.
+
+With this combination of options, players can play human to human, AI to AI, or even human to AI.
+
+Example:
+Human to AI
+  Player red = new HumanPlayer();
+  Player blue = new AIPlayer();
+  controller.startGame(red, blue, decks);
